@@ -1,0 +1,15 @@
+{
+  "name": "loreal-claims-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @claims/api --filter @claims/web dev",
+    "build": "pnpm --filter @claims/api build && pnpm --filter @claims/web build",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint",
+    "db:generate": "pnpm --filter @claims/api prisma:generate",
+    "db:migrate": "pnpm --filter @claims/api prisma:migrate",
+    "db:studio": "pnpm --filter @claims/api prisma:studio"
+  }
+}
